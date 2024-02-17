@@ -32,17 +32,21 @@
 
 Для запуска автотестов необходимо вводить команды в консоли терминала.
 
-4. Для негативных тестов страницы регистрации:
+1. Для поля ввода "Имя пользователя":
 
-       python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>\<chromedriver_file> tests\test4_negative_registration.py -k TestNegativePageRegistration
+       python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>\<chromedriver_file> tests\test_negative_registration.py -k test_registration_invalid_username
 
-5. Для негативных тестов страницы авторизации:
+2. Для поля ввода "Электронная почта":
 
-       python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>\<chromedriver_file> tests\test5_negative_authorisation.py -k TestNegativePageAuthorisation
+       python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>\<chromedriver_file> tests\test_negative_registration.py -k test_registration_invalid_email
 
-6. Для негативных тестов страницы восстановления пароля:
+3. Для поля ввода "Пароль":
 
-       python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>\<chromedriver_file> tests\test6_negative_recovery_pass.py -k TestNegativePageRecoveryPass
+       python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>\<chromedriver_file> tests\test_negative_registration.py -k test_registration_invalid_password
+   
+4. Для поля ввода "Реферальный код":
+
+       python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>\<chromedriver_file> tests\test_negative_registration.py -k test_registration_invalid_ref_code
 
 <chromedriver_directory>\<chromedriver_file> - путь к директории файла драйвера\название файла браузера. Например: C:\Chrome-selenium\chromedriver.exe
 
