@@ -53,6 +53,10 @@
 
        python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>\<chromedriver_file> tests\test_negative_registration.py -k test_registration_invalid_ref_code
 
+5. Для запуска всех тестов:
+
+       python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>\<chromedriver_file> tests\test_negative_registration.py   
+
 <chromedriver_directory>\<chromedriver_file> - путь к директории файла драйвера\название файла браузера. Например: C:\Chrome-selenium\chromedriver.exe
 
 Окружение: Google Chrome Версия 121, Windows 11 Home (64 бит)
